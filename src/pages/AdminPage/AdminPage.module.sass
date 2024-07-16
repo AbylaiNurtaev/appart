@@ -1,0 +1,304 @@
+@import '../../styles/_fonts'
+    
+.container
+    width: 100vw
+    display: flex
+    flex-direction: column
+
+    justify-content: center
+    align-items: center
+
+    .header
+        background: #e6effb
+        width: 100%
+
+        height: 80px
+        display: flex
+        flex-direction: row
+
+        justify-content: center
+        align-items: center
+
+        .innerHeader
+            width: 1200px
+            display: flex
+            flex-direction: row
+
+            justify-content: flex-start
+            align-items: center
+
+
+            img
+                width: 150px
+
+            .options
+                display: flex
+                flex-direction: row
+
+                justify-content: center
+                align-items: center
+
+                margin-left: 100px
+                gap: 30px
+
+                p
+                    font-family: $avenir-regular
+                    cursor: pointer
+
+            .exit
+                width: 20px
+                margin-left: 800px
+                cursor: pointer
+
+    
+    .unheader
+        width: 100vw
+        height: 100px
+
+        background: #e0eaf8
+        display: flex
+        flex-direction: column
+
+        justify-content: center
+        align-items: center
+
+    .innerContainer
+        width: 1200px
+        display: flex
+        flex-direction: column
+
+        justify-content: center
+        align-items: center
+
+
+        .inputs
+            width: 100%
+            @extend .innerContainer
+            margin-top: 100px
+            span
+                font-family: $delagothicone
+                color: #439fd8
+                margin: 0
+                padding: 0
+                margin-right: 5px
+            
+            h2
+                font-family: $delagothicone
+                font-size: 30px
+
+                color: #2551c9
+            input
+                width: 270px
+                height: 55px
+
+                border: none
+                border-radius: 5px
+
+                background: #e4f1fa
+                font-family: $avenir-regular
+                margin: 10px
+
+            button
+                @extend input
+                background: #ffd24d
+                color: black
+                cursor: pointer
+                font-family: $delagothicone
+                    
+            .errorLogin
+                color: red
+                font-family: $avenir-regular
+                
+
+        .adminPanel
+            width: 100%
+            display: flex
+            flex-direction: row
+
+            justify-content: space-between
+            align-items: flex-start
+
+            margin-top: 20px
+
+            .createItem, .deleteItem
+                display: flex
+                flex-direction: column
+
+                justify-content: center
+                align-items: flex-start
+
+                gap: 10px
+
+                h1
+                    font-family: $delagothicone
+                    color: #2551c9
+
+                    font-weight: lighter
+
+                input, button
+                    width: 300px
+                    height: 40px
+                    padding: 0 20px 0 20px 
+
+                    border-radius: 4px
+                    border: none
+
+                    font-family: $avenir-regular
+                    background: #e6effb
+
+                button
+                    cursor: pointer
+
+                .createBtn, .deleteBtn
+                    width: 210px
+                    height: 56px
+
+                    color: black
+                    font-family: $delagothicone
+
+                    background: #ffd24d
+                    border: none
+                    cursor: pointer
+
+                    border-radius: 10px
+
+
+
+                textarea 
+                    width: 400px
+                    height: 400px
+                    background: #e6effb
+                    border: none
+                    font-family: $avenir-regular
+
+            .option
+                display: flex
+                flex-direction: row
+
+                justify-content: center
+                align-items: center
+
+                p
+
+                    margin: 10px
+
+                input
+                    margin: 0
+                    width: 20px
+
+
+            
+        .articles
+            display: flex
+            flex-direction: column
+
+            justify-content: center
+            align-items: flex-start
+
+            width: 100%
+
+            .title
+                display: flex
+                flex-direction: row
+
+                justify-content: flex-start
+                align-items: center
+
+                gap: 15px
+
+                font-family: $delagothicone
+                font-size: 18px
+
+                width: 100%
+
+                .slash
+                    color: #439fd8
+
+                .titlePath
+                    color: #2c58a4
+            p
+                font-family: $avenir-regular
+
+            input, .codeInput
+                width: 100%
+                height: 40px
+                border: none
+
+                background: #e6effb
+                border-radius: 4px
+
+            button
+                width: 210px
+                height: 56px
+
+                color: black
+                font-family: $delagothicone
+
+                background: #e6effb
+                border: none
+                cursor: pointer
+
+                border-radius: 10px
+                margin: 15px
+
+
+            .codeInput
+
+                height: 400px
+
+            .descriptionInput
+                height: 70px
+        
+                
+            .createBtn, .deleteBtn
+                width: 210px
+                height: 56px
+
+                color: black
+                font-family: $delagothicone
+
+                background: #ffd24d
+                border: none
+                cursor: pointer
+
+                border-radius: 10px
+                margin: 15px
+
+        .messages
+            display: flex
+            flex-direction: row
+
+            width: 100%
+            justify-content: space-between
+            align-items: flex-start
+            margin-top: 20px
+
+            .title
+                font-family: $delagothicone
+                font-size: 20px                
+                color: #2c58a4
+
+            .order, .question
+                display: flex
+                flex-direction: row
+
+                justify-content: center
+                align-items: center
+
+                background: #e6effb
+
+                font-family: $avenir-regular
+
+                gap: 40px
+                padding: 15px
+                border-radius: 10px
+
+                margin-top: 20px
+
+                p
+                    font-weight: bolder
+
+                button
+                    background: none
+                    border: none
+                    cursor: pointer

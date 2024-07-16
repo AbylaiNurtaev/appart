@@ -1,0 +1,102 @@
+@import '../../styles/_fonts'
+
+.container
+    display: flex
+    
+    justify-content: center
+    align-items: center
+
+    width: 100vw
+
+    .innerContainer
+        display: flex
+        flex-direction: column
+
+        justify-content: center
+        align-items: center
+
+        width: 1200px
+
+        .path
+            text-decoration: underline
+            color: black
+
+            font-family: $avenir-regular
+            margin-top: 30px
+            
+            width: 100%
+            
+
+        .title
+            display: flex
+            flex-direction: row
+
+            justify-content: flex-start
+            align-items: center
+
+            gap: 15px
+
+            font-family: $delagothicone
+            font-size: 18px
+
+            width: 100%
+
+            .slash
+                color: #439fd8
+
+            .titlePath
+                color: #2c58a4
+
+
+        .articles
+            display: flex
+            flex-direction: column
+
+            justify-content: center
+            align-items: flex-start
+
+            width: 100%
+
+            .article
+                display: flex
+                flex-direction: row
+
+                justify-content: flex-start
+                align-items: center
+
+                gap: 25px
+
+                width: 100%
+                padding: 15px 0 15px 0
+                border-bottom: 1px solid #dddddd
+                
+
+                img
+                    width: 140px
+                    height: 85px
+
+                    object-fit: cover
+
+                p
+                    font-family: $avenir-regular
+                    color: #1f1f1f
+
+                    text-decoration: underline
+                    cursor: pointer
+
+@media screen and ( max-width:  1250px)
+    .container
+        .innerContainer
+            width: 800px
+
+@media screen and ( max-width:  850px)
+    .container
+        .innerContainer
+            width: 500px
+
+@media screen and ( max-width:  520px)
+    .container
+        .innerContainer
+            width: 95vw
+    
+    

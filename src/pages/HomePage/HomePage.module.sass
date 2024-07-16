@@ -1,0 +1,326 @@
+@import '../../styles/_fonts'
+    
+.container
+    display: flex
+    flex-direction: column
+    
+    justify-content: center
+    align-items: center
+
+    width: 100vw
+
+    .titleSide
+        height: 325px
+        min-width: 100%
+        background: url("../../images/backgroundOfTitle.jpg") center (center / cover) no-repeat
+
+        display: flex
+        flex-direction: column
+
+        justify-content: flex-start
+        align-items: center
+
+
+
+        .titleText
+            color: #305ba6
+            font-family: $delagothicone
+
+            width: 1200px
+            border-top: 1px solid #dddddd
+
+            display: flex
+            flex-direction: row
+
+            justify-content: center
+            align-items: center
+            height: 140px
+            font-size: 45px
+
+        .filters
+            width: 1200px
+            height: 135px
+
+            background: white
+            border-radius: 10px
+
+            display: flex
+            flex-direction: row
+
+            justify-content: center
+            align-items: center
+            gap: 34px
+
+            .calendarBlock
+                display: flex
+                flex-direction: column
+
+                justify-content: center
+                align-items: center
+                .entryCalendar, .exitCalendar
+                    position: absolute
+                    margin-top: 350px
+
+
+            .block, .selectBlock
+                width: 270px
+                height: 56px
+
+                border-radius: 5px
+                background: #e4f1fa
+
+                display: flex
+                flex-direction: row
+
+                justify-content: space-around
+                align-items: center
+                // gap: 30px
+                cursor: pointer
+
+                .text
+                    color: #666666
+                    font-family: $avenir-regular
+
+                .data
+                    color: black
+                    font-family: $avenir
+
+                .entryCalendar, .exitCalendar
+                    position: absolute
+                    margin-top: 330px
+
+            .selectBlock
+                .optionsBlock
+                    position: absolute
+                    margin-top: 330px
+                    background: #e4f1fa
+                    height: 265px
+                    width: 270px
+
+                    display: flex
+                    flex-direction: column
+
+                    justify-content: center
+                    align-items: flex-start
+                    border-radius: 5px
+                    box-shadow: 0px 0px 16px -7px rgba(0,0,0,0.75)
+
+                    
+
+                    .option
+                        font-family: $avenir
+                        color: black
+                        height: 46px
+
+                        width: 90%
+                        padding-left: 10%
+                        padding-top: 10px
+                        text-align: left
+
+                        border-bottom: 1px solid #bbdcf2
+
+                        &:nth-child(6)
+                            border: none
+                            
+            .findBtn
+                width: 210px
+                height: 56px
+
+                color: black
+                font-family: $delagothicone
+
+                background: #ffd24d
+                border: none
+                cursor: pointer
+
+                border-radius: 10px
+            
+
+            
+
+    .innerContainer
+        display: flex
+        flex-direction: column
+
+        justify-content: center
+        align-items: center
+
+        width: 1200px
+
+        .title
+            display: flex
+            flex-direction: row
+
+            justify-content: flex-start
+            align-items: center
+
+            gap: 15px
+
+            font-family: $delagothicone
+            font-size: 18px
+
+            width: 100%
+
+            .slash
+                color: #439fd8
+
+            .titlePath
+                color: #2c58a4
+
+    .appartments
+        display: flex
+        flex-direction: row
+        justify-content: flex-start
+        align-items: center
+
+        flex-wrap: wrap
+        width: 100%
+        gap: 57px
+
+    .textSide
+        width: 100%
+        display: flex
+        flex-direction: column
+
+        .title
+            display: flex
+            flex-direction: row
+
+            justify-content: flex-start
+            align-items: center
+
+            gap: 15px
+
+            font-family: $delagothicone
+            font-size: 18px
+
+            width: 100%
+
+            .slash
+                color: #439fd8
+
+            .titlePath
+                color: #2c58a4
+
+        .text
+            width: 100%
+            font-family: $avenir-regular
+            line-height: 30px
+
+
+
+@media screen and ( max-width:  1250px)
+    .container
+        .innerContainer
+            width: 800px
+        .titleSide
+            .titleText
+                width: 800px
+                text-align: center
+
+            .filters
+                width: 800px
+                gap: 15px
+
+                .block, .selectBlock
+                    width: 180px
+                    height: 50px
+
+                    .text
+                        font-size: 14px
+
+                    .data
+                        font-size: 14px
+
+                    img
+                        width: 15px
+
+                .findBtn
+                    width: 150px
+
+                .selectBlock
+                    .optionsBlock
+                        width: 200px
+
+            
+
+
+@media screen and ( max-width:  850px)
+    .container
+        .innerContainer
+            width: 500px
+            .title
+                justify-content: center 
+            .appartments
+                justify-content: center
+        .titleSide
+            height: 150px
+            .titleText
+                width: 500px
+                font-size: 20px
+                height: 50px
+                
+        
+            .filters
+                width: 500px
+                height: 75px
+                border-radius: 5px
+
+                .block, .selectBlock
+                    width: 120px
+                    height: 40px
+
+                    .text, .data
+                        font-size: 10px
+                    img
+                        display: none
+
+                .findBtn
+                    width: 80px
+                    height: 30px
+
+                    font-size: 10px
+                    border-radius: 3px
+
+@media screen and ( max-width:  520px)
+    .container
+        .titleSide
+            height: 390px
+            margin-top: 10px
+            .titleText
+                width: 95%  
+                border: none
+                height: 95px
+                font-size: 22px
+            .filters
+                flex-direction: column
+                height: 270px
+                width: 333px
+
+                .calendarBlock
+                    .block
+                        .data
+                            font-size: 15px
+            
+                .block, .selectBlock, .findBtn
+                    width: 285px
+                    height: 45px
+                    font-size: 15px
+
+                    .data
+                        font-size: 15px
+                    .text, .data
+                        font-size: 15px
+
+                    img
+                        display: flex
+                
+
+
+
+        .innerContainer
+            width: 350px
+    
+            .textSide
+                width: 350px
+                

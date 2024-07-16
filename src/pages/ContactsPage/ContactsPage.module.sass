@@ -1,0 +1,66 @@
+@import '../../styles/_fonts'
+
+.container
+    display: flex
+    justify-content: center
+    align-items: center
+
+    width: 100vw
+
+    .innerContainer
+        display: flex
+        flex-direction: column
+
+        justify-content: center
+        align-items: center
+
+        width: 1200px
+
+        .path
+            text-decoration: underline
+            color: black
+
+            font-family: $avenir-regular
+            margin-top: 30px
+            
+            width: 100%
+            
+
+        .title
+            display: flex
+            flex-direction: row
+
+            justify-content: flex-start
+            align-items: center
+
+            gap: 15px
+
+            font-family: $delagothicone
+            font-size: 18px
+
+            width: 100%
+
+            .slash
+                color: #439fd8
+
+            .titlePath
+                color: #2c58a4
+
+        .map
+            width: 100%
+            height: 360px
+
+
+@media screen and ( max-width:  1250px)
+    .container .innerContainer
+        width: 800px
+
+@media screen and ( max-width:  850px)
+    .container .innerContainer
+        width: 500px
+@media screen and ( max-width:  520px)
+    .container .innerContainer
+        width: 100vw
+        .path, .title
+                width: 90%
+    

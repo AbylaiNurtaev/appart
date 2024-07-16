@@ -1,0 +1,151 @@
+
+.container
+    display: flex
+    flex-direction: row
+
+    justify-content: center
+    align-items: flex-start
+
+    width: 600px
+
+    gap: 50px
+
+    .left
+        display: flex
+        flex-direction: column
+
+        justify-content: center
+        align-items: center
+        padding-bottom: 50px
+
+        gap: 20px
+        .prew
+            display: flex
+            flex-direction: row
+
+            justify-content: space-between
+            align-items: center
+            .leftButton, .rightButton
+                display: flex
+                flex-direction: column
+
+                justify-content: center
+                align-items: center
+
+                position: absolute
+                background: none
+
+                z-index: 0
+                border: none
+                width: 80px
+                height: 50px
+                transition: .3s
+
+
+                img
+                    width: 50px
+                    height: 50px
+                    object-fit: cover
+                    cursor: pointer
+
+                    
+            img
+                width: 600px
+                height: 420px
+                object-fit: cover   
+                    
+            
+            .rightButton
+                background: none
+
+                
+                margin-left: 520px
+
+            .leftButton
+                transform: scaleX(-1)
+
+            img
+                z-index: -100
+
+        .rulet
+            display: flex
+
+            flex-direction: row
+            justify-content: flex-start
+            align-items: center
+            flex-wrap: wrap
+
+            width: 600px
+
+            gap: 5px
+
+            img
+                width: 80px
+                object-fit: cover
+                height: 60px
+                opacity: 0.4
+                
+                
+
+                &:hover
+                    opacity: 1
+                    cursor: pointer
+
+            #light
+                opacity: 0.8
+                border: 3px solid #439fd8 
+                box-sizing: border-box
+                
+
+@media screen and ( max-width:  1250px)
+    .container
+        width: 500px
+        flex-direction: column
+
+        justify-content: center
+        align-items: center
+
+        gap: 0
+
+        .left
+            width: 100%
+            .rulet
+                width: 100%
+            .prew
+                .rightButton
+                    margin-left: 420px
+                img
+                    width: 500px
+
+@media screen and ( max-width:  900px)
+    .container
+        width: 540px
+
+@media screen and ( max-width:  540px)
+    .container
+        width: 350px
+
+        .left
+            flex-direction: column
+            gap: 15px
+            .prew
+                .leftButton, .rightButton
+                    width: 50px
+                    height: 230px
+                    img
+                        width: 30px
+                        height: 30px
+                
+                .rightButton
+                    margin-left: 300px
+                img
+                    width: 350px
+                    height: 230px
+
+            .rulet
+                flex-direction: row
+                width: 350px
+                flex-wrap: wrap
+
+        .right
+            width: 350px

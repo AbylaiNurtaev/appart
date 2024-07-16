@@ -1,0 +1,809 @@
+@import '../../styles/_fonts'
+    
+.container
+    display: flex
+    flex-direction: column
+
+    justify-content: center
+    align-items: center
+
+    width: 100vw
+
+    .overlay
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: rgba(0, 0, 0, 0.5)
+        backdrop-filter: blur(5px)
+        z-index: 1
+
+    .pop_up
+        position: fixed
+        width: 580px
+        height: 580px
+        z-index: 2
+
+
+        border-radius: 10px
+        background: white
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        
+        box-shadow: 0px 0px 16px -7px rgba(0,0,0,0.75)
+
+        display: flex
+        flex-direction: column
+
+        justify-content: center
+        align-items: center
+
+        .closeIcon
+            right: 10px
+            top: 10px
+            position: absolute
+            cursor: pointer
+
+        .successIcon
+            width: 80px
+            margin-top: 30px
+
+        .par
+            font-family: $avenir-regular
+            width: 100%
+            text-align: center
+
+        .closeBtn
+            font-family: $delagothicone
+            color: black
+
+            width: 220px
+            height: 55px
+
+            border-radius: 5px
+            background: #e4f1fa
+            border: none
+
+            margin-top: 40px
+            cursor: pointer
+
+
+
+        .title
+            font-family: $delagothicone
+            color: #2c58a4
+
+            font-size: 25px
+            margin: 15px
+
+            
+
+        .findBtn
+            width: 210px
+            height: 56px
+
+            color: black
+            font-family: $delagothicone
+
+            background: #ffd24d
+            border: none
+            cursor: pointer
+            margin-top: 20px    
+
+            border-radius: 10px
+
+        .block, .selectBlock, .question
+            width: 270px
+            height: 56px
+
+            border-radius: 5px
+            background: #e4f1fa
+
+            display: flex
+            flex-direction: row
+
+            justify-content: space-around
+            align-items: center
+            // gap: 30px
+            cursor: pointer
+            border: none
+            outline: none
+
+            margin-top: 20px
+            font-family: $avenir-regular
+            
+            &::placeholder
+                font-size: 16px
+                font-weight: lighter
+
+            .text
+                color: #666666
+                font-family: $avenir-regular
+
+            .data
+                color: black
+                font-family: $avenir
+
+        .question
+            font-size: 14px
+            height: 100px   
+            justify-content: flex-start
+            align-items: flex-start
+            padding-top: 15px
+
+            &::placeholder
+                font-size: 14px
+                font-weight: lighter
+
+    .innerContainer
+        width: 1200px
+        display: flex
+        flex-direction: column
+
+        justify-content: center
+        align-items: center
+
+        .overlay
+            position: fixed
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background: rgba(0, 0, 0, 0.5)
+            backdrop-filter: blur(5px)
+            z-index: 2
+
+        .pop_up
+            position: fixed
+            width: 580px
+            height: 580px
+            z-index: 3
+
+
+            border-radius: 10px
+            background: white
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            
+            box-shadow: 0px 0px 16px -7px rgba(0,0,0,0.75)
+
+            display: flex
+            flex-direction: column
+
+            justify-content: center
+            align-items: center
+
+            .closeIcon
+                right: 10px
+                top: 10px
+                position: absolute
+                cursor: pointer
+
+            .successIcon
+                width: 80px
+                margin-top: 30px
+
+            .par
+                font-family: $avenir-regular
+                width: 100%
+                text-align: center
+
+            .closeBtn
+                font-family: $delagothicone
+                color: black
+
+                width: 220px
+                height: 55px
+
+                border-radius: 5px
+                background: #e4f1fa
+                border: none
+
+                margin-top: 40px
+                cursor: pointer
+
+
+
+            .title
+                font-family: $delagothicone
+                color: #2c58a4
+
+                font-size: 25px
+                margin: 15px
+
+            .filters
+                width: 100%
+
+                background: white
+                border-radius: 10px
+
+                display: flex
+                flex-direction: column
+
+                justify-content: center
+                align-items: center
+                gap: 14px
+                
+                .calendarBlock
+                    display: flex
+                    flex-direction: column
+
+                    
+
+                    justify-content: center
+                    align-items: center
+                    .entryCalendar, .exitCalendar
+                        position: absolute
+                        margin-top: 350px
+
+
+
+                .block, .selectBlock
+                    width: 270px
+                    height: 56px
+
+                    border-radius: 5px
+                    background: #e4f1fa
+
+                    display: flex
+                    flex-direction: row
+
+                    justify-content: space-around
+                    align-items: center
+                    // gap: 30px
+                    cursor: pointer
+                    border: none
+                    outline: none
+
+                    font-family: $avenir-regular
+                    
+                    &::placeholder
+                        font-size: 16px
+                        font-weight: lighter
+
+                    .text
+                        color: #666666
+                        font-family: $avenir-regular
+
+                    .data
+                        color: black
+                        font-family: $avenir
+
+                    .entryCalendar, .exitCalendar
+                        position: absolute
+                        margin-top: 330px
+
+                .selectBlock
+                    .optionsBlock
+                        position: absolute
+                        margin-top: 330px
+                        background: #e4f1fa
+                        height: 265px
+                        width: 270px
+
+                        display: flex
+                        flex-direction: column
+
+                        justify-content: center
+                        align-items: flex-start
+                        border-radius: 5px
+                        box-shadow: 0px 0px 16px -7px rgba(0,0,0,0.75)
+
+                        
+
+                        .option
+                            font-family: $avenir
+                            color: black
+                            height: 46px
+
+                            width: 90%
+                            padding-left: 10%
+                            padding-top: 10px
+                            text-align: left
+
+                            border-bottom: 1px solid #bbdcf2
+
+                            &:nth-child(6)
+                                border: none
+
+                .findBtn
+                    width: 210px
+                    height: 56px
+
+                    color: black
+                    font-family: $delagothicone
+
+                    background: #ffd24d
+                    border: none
+                    cursor: pointer
+
+                    border-radius: 10px
+
+        .path 
+            color: black
+            font-family: $avenir-regular
+            margin-top: 30px
+            width: 100%
+            display: flex
+            align-items: center
+
+            span 
+                text-decoration: underline
+                cursor: pointer
+            
+
+            .slash 
+                text-decoration: none !important
+                margin: 0 5px
+                cursor: auto
+        
+
+        .infoSide
+            width: 100%
+            display: flex
+            flex-direction: row
+
+            justify-content: space-between
+            align-items: flex-start
+
+            margin-top: 35px
+
+            .right
+                width: 550px
+
+                display: flex
+                flex-direction: column
+
+                justify-content: flex-start
+                align-items: flex-start
+                
+                .title
+                    font-family: $delagothicone
+                    font-size: 30px
+
+                    color: #2c58a4
+                
+                .priceBlock
+
+                    display: flex
+                    flex-direction: row
+
+
+                    justify-content: center
+                    align-items: center
+                    gap: 30px
+                    margin-top: 25px
+
+                    .price
+                        font-family: $delagothicone
+                        font-size: 17px
+
+                    .lot
+                        font-family: $avenir-regular
+                        color: #272727
+
+                .buttons
+                    display: flex
+                    flex-direction: row
+
+                    justify-content: center
+                    align-items: center
+
+                    gap: 20px
+                    margin-top: 25px
+
+                    .bron
+                        width: 230px
+                        height: 56px
+
+                        color: black
+                        font-family: $delagothicone
+
+                        background: #ffd24d
+                        border: none
+                        cursor: pointer
+
+                        border-radius: 10px
+                        display: flex
+                        flex-direction: row
+
+                        justify-content: center
+                        align-items: center
+                        gap: 10px
+
+                    .question
+                        width: 224px
+                        height: 50px
+
+                        border-radius: 8px
+                        border: 2px solid #305ba6
+
+                        font-family: $delagothicone
+                        color: #305ba6
+
+                        background: none
+                        font-size: 15px
+
+                        cursor: pointer
+
+                        display: flex
+                        flex-direction: row
+
+                        justify-content: center
+                        align-items: center
+
+                        gap: 10px
+
+
+                .more
+                    display: flex
+                    flex-direction: row
+
+                    justify-content: flex-start
+                    align-items: center
+                    flex-wrap: wrap
+
+                    width: 525px
+                    height: 100px
+
+                    border-radius: 10px
+                    background: #e4f1fa
+
+                    padding-left: 25px
+                    margin-top: 30px
+
+
+                    .block
+                        display: flex
+                        flex-direction: column
+
+                        justify-content: flex-start
+                        align-items: flex-start
+
+                        gap: 10px
+                        width: 200px
+
+
+                        div
+                            display: flex
+                            flex-direction: row
+
+                            justify-content: center
+                            align-items: center
+
+                            gap: 15px
+                            height: 30px
+                            white-space: nowrap
+
+                            font-family: $avenir-regular
+
+                .text
+                    margin-top: 30px
+                    font-family: $avenir-regular
+
+        .optionSide
+            display: flex
+            flex-direction: column
+
+            justify-content: flex-start
+            align-items: flex-start
+            width: 100%
+            .title
+                display: flex
+                flex-direction: row
+
+                justify-content: flex-start
+                align-items: center
+
+                gap: 15px
+
+                font-family: $delagothicone
+                font-size: 18px
+
+                width: 100%
+
+                .slash
+                    color: #439fd8
+
+                .titlePath
+                    color: #2c58a4
+
+            .options
+                display: flex
+                flex-direction: row
+                justify-content: flex-start
+                align-items: center
+                flex-wrap: wrap
+                
+
+                width: 100%
+                height: 125px
+
+                .option
+                    display: flex
+                    flex-direction: row
+
+                    justify-content: center
+                    gap: 20px
+                    margin-right: 55px
+                    font-family: $avenir-regular
+
+        .map
+            display: flex
+            flex-direction: column
+
+            justify-content: flex-start
+            align-items: flex-start
+            width: 100%
+            .title
+                display: flex
+                flex-direction: row
+
+                justify-content: flex-start
+                align-items: center
+
+                gap: 15px
+
+                font-family: $delagothicone
+                font-size: 18px
+
+                width: 100%
+                height: 100px
+
+                .slash
+                    color: #439fd8
+
+                .titlePath
+                    color: #2c58a4
+
+        .moreOptions
+            display: flex
+            flex-direction: column
+
+            justify-content: center
+            align-items: center
+
+            width: 100%
+
+            .title
+                display: flex
+                flex-direction: row
+
+                justify-content: flex-start
+                align-items: center
+
+                gap: 15px
+
+                font-family: $delagothicone
+                font-size: 18px
+
+                width: 100%
+                height: 100px
+
+                .slash
+                    color: #439fd8
+
+                .titlePath
+                    color: #2c58a4
+
+            .appartments
+                display: flex
+                flex-direction: row
+                justify-content: flex-start
+                width: 100%
+                gap: 57px
+
+
+@media screen and ( max-width:  1250px)
+    .container
+        .innerContainer
+            width: 800px
+
+            .infoSide
+                justify-content: center
+                gap: 50px
+
+                .right
+                    width: 300px
+
+                    .title
+                        font-size: 20px
+
+                    .priceBlock
+                        flex-direction: column
+                        align-items: flex-start
+                        margin-top: 10px
+
+                        gap: 15px
+
+                    .buttons
+                        flex-direction: column
+
+                        .bron, .question
+                            width: 210px
+
+                    .more
+                        width: 90%
+                        height: auto
+                        padding: 10px 
+            .moreOptions
+                .appartments
+                    flex-wrap: wrap
+                    gap: 10px
+
+@media screen and ( max-width:  850px)
+    .container
+        padding-bottom: 20px
+        .pop_up
+            width: 350px
+            height: 450px
+
+            .par
+
+            .title
+                font-size: 20px
+
+            .filters
+                gap: 15px
+
+        .path
+            text-align: center
+
+        .infoSide
+            flex-direction: column
+            gap: 5px
+            .right
+                width: 100%
+                .title
+                    font-size: 30px
+
+                .buttons
+                    width: 100%
+                    .bron, .question
+                        width: 250px 
+                    .whatsappBtn
+                        width: 250px
+                        height: 50px
+
+                        border-radius: 8px
+                        border: 3px solid #30a644
+
+                        font-family: $delagothicone
+                        color: #30a644
+
+                        background: none
+                        font-size: 15px
+
+                        cursor: pointer
+
+                        display: flex !important
+                        flex-direction: row
+
+                        justify-content: center
+                        align-items: center
+
+                        gap: 10px
+
+                        img
+                            width: 20px
+
+
+                .more
+                    align-items: center
+                    justify-content: center
+                    width: 90%
+                    margin-top: 20px
+                    margin-left: auto
+                    margin-right: auto
+                    padding: 10px 0 10px 0
+                    
+                    .block
+                        width: 100%
+                        justify-content: flex-start
+                        align-items: flex-start
+
+                        div
+                            margin-left: 20px
+
+        .optionSide
+            margin-left: auto
+            margin-right: auto
+            width: 90%
+            .options
+                height: auto
+                flex-direction: column
+
+                align-items: flex-start
+
+                .option
+                    margin: 0
+                    
+        .innerContainer
+            width: 350px
+            .pop_up
+                width: 350px
+                height: 550px
+
+                .par
+
+                .title
+                    font-size: 20px
+
+                .filters
+                    gap: 15px
+
+            .path
+                text-align: center
+
+            .infoSide
+                flex-direction: column
+                gap: 5px
+                .right
+                    width: 100%
+                    .title
+                        font-size: 30px
+
+                    .buttons
+                        width: 100%
+                        .bron, .question
+                            width: 250px 
+                        .whatsappBtn
+                            width: 250px
+                            height: 50px
+
+                            border-radius: 8px
+                            border: 3px solid #30a644
+
+                            font-family: $delagothicone
+                            color: #30a644
+
+                            background: none
+                            font-size: 15px
+
+                            cursor: pointer
+
+                            display: flex !important
+                            flex-direction: row
+
+                            justify-content: center
+                            align-items: center
+
+                            gap: 10px
+
+                            img
+                                width: 20px
+
+
+                    .more
+                        align-items: center
+                        justify-content: center
+                        width: 90%
+                        margin-top: 20px
+                        margin-left: auto
+                        margin-right: auto
+                        padding: 10px 0 10px 0
+                        
+                        .block
+                            width: 100%
+                            justify-content: flex-start
+                            align-items: flex-start
+
+                            div
+                                margin-left: 20px
+
+            .optionSide
+                margin-left: auto
+                margin-right: auto
+                width: 90%
+                .options
+                    height: auto
+                    flex-direction: column
+
+                    align-items: flex-start
+
+                    .option
+                        margin: 0
+                        

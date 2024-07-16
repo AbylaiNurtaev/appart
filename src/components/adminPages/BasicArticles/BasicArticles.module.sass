@@ -1,0 +1,122 @@
+@import '../../../styles/_fonts'
+    
+.container
+    display: flex
+    flex-direction: column
+
+    justify-content: center
+    align-items: center
+
+    width: 100vw
+
+    .innerContainer
+        width: 1200px
+
+        display: flex
+        flex-direction: column
+
+        justify-content: center
+        align-items: center
+
+        .topSide
+            width: 100%
+            display: flex
+            flex-direction: row
+
+            justify-content: space-between
+            align-items: center
+            margin-top: 20px
+
+
+            .title
+                font-family: $delagothicone
+                font-size: 23px
+                color: #2c58a4
+
+
+                span
+                    color: #439fd8
+                    margin-right: 7px
+
+
+            button
+                background: #ffd24d
+                color: black
+                cursor: pointer
+                font-family: $delagothicone
+
+                width: 147px
+                height: 47px
+
+                border: none
+                border-radius: 5px
+
+        .appartmentsSide
+            display: flex
+            flex-direction: column
+
+            justify-content: center
+            align-items: center
+
+            width: 100%
+
+            .appartment
+                @extend .appartmentsSide
+                flex-direction: row
+
+                justify-content: space-between
+                border-bottom: 1px solid #2222
+
+                height: 60px
+                font-family: $avenir
+
+                
+
+                .lot
+                    font-weight: bold
+                    color: #2c58a4
+                    cursor: pointer
+                    text-decoration: underline
+                    white-space: nowrap
+                    
+
+
+                .title
+                    color: black
+                    margin-left: 20px
+                    cursor: pointer
+                    width: 100px
+                    white-space: nowrap
+                    font-family: $avenir-regular
+                    text-decoration: underline
+                    color: #2c58a4
+
+
+                .hide
+                    margin-left: 60%
+                    color: #2c58a4
+                    cursor: pointer
+                    width: 100px
+
+                    
+
+                    display: flex
+                    flex-direction: row
+                    gap: 10px
+
+                    justify-content: center
+                    align-items: center
+
+                .delete
+                    margin-left: 100px
+                    color: #2c58a4
+                    cursor: pointer
+
+                    width: 100px
+
+                    display: flex
+                    flex-direction: row
+                    gap: 10px
+
+                    justify-content: center
+                    align-items: center
