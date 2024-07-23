@@ -93,7 +93,7 @@ function AdminAppartments() {
                 }
             });
             
-            const imageUrl = `https://appartmentsback-production-18a0.up.railway.app${data.url}`;
+            const imageUrl = `${process.env.REACT_APP_BASE_URL}${data.url}`;
             console.log(imageUrl);
             
             setImages((prevImages) => {

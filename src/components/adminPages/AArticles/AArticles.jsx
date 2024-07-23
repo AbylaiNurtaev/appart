@@ -80,7 +80,7 @@ function AArticles() {
             const file = e.target.files[0];
             formData.append('image', file);
             const { data } = await axios.post('/upload', formData);
-            const imageUrl = `https://appartmentsback-production-18a0.up.railway.app${data.url}`;
+            const imageUrl = `${process.env.REACT_APP_BASE_URL}${data.url}`;
             setPrewieImage(imageUrl);
         } catch (error) {
             console.log(error);
